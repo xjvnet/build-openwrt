@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git clone "https://github.com/project-openwrt/openwrt.git" --branch "openwrt-18.06" --single-branch "openwrt"
-pushd "openwrt"; ./scripts/feeds update -a; ./scripts/feeds install -a; popd
+git clone -b openwrt-18.06-k5.4 --single-branch https://github.com/project-openwrt/openwrt && cd openwrt
+./scripts/feeds update -a && ./scripts/feeds install -a popd
